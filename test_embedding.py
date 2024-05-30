@@ -22,7 +22,7 @@ results = collection.aggregate([
   {"$vectorSearch": {
     "queryVector": generate_embedding(query),
     "path": "plot_embedding_hf",
-    "numCandidates": 100, # Optimiztion Paramter
+    "numCandidates": 100, # Optimiztion Parameter
     "limit": 4, # Limit result to top 4 matches
     "index": "PlotSemanticSearch", # Index is used for search
       }}

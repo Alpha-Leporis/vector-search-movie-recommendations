@@ -32,8 +32,6 @@ def generate_embedding(text: str) -> list[float]:
 
   return response.json()
 
-# print(generate_embedding("GenerativeAI"))
-
 for doc in collection.find({'plot':{"$exists": True}}).limit(50):
   doc['plot_embedding_hf'] = generate_embedding(doc['plot'])
   collection.replace_one({'_id': doc['_id']}, doc)

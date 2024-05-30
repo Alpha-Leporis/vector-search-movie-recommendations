@@ -15,7 +15,6 @@ $ cd vector-search-movie-recommendations
 ```
 
 ### 2. Install Required Packages
-Ensure you have Python 3.8 or higher installed. Install the required packages using:
 ```bash
 $ pip install -r requirements.txt
 ```
@@ -29,10 +28,10 @@ $ pip install -r requirements.txt
   * There are quite a few different sample data databases And we're just going to use movies, which is called sample_mflix.
 
 ### 5. Create MongoDB connection in local system.
-  * Go to Cluster0 and connect Database using MongoDB's drivers(e.g. python, node.js).
+  * Go to `Cluster0` and connect Database using MongoDB's drivers(e.g. python, node.js).
   * copy and paste connection string in code and replace username and password accordingly.
 
-### 6. Load all-MiniLM-L6-v2 model using the hugging face inference API in local system.
+### 6. Load [all-MiniLM-L6-v2](https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2) hugging face model using API in local system.
   * login to hugging face go to settings, access tokens.
   * create a new token to generate embeddings.
   * Replace the token in code.
@@ -41,7 +40,7 @@ $ pip install -r requirements.txt
   * In this code, we are storing the vector embedding in the original collection.
 
 ### 8. Next step is to create a vector search index,
-  * Goto Cluster0, Atlas search. create a search index use JSON editor and paste the below code.
+  * Goto `Cluster0`, Atlas search. create a search index use JSON editor and paste the below code.
   * Select the database "sample_mflix" and collection "movies" on the left, paste index name and below code on the right. 
   * Click next and then click create search index.
 
